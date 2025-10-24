@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiX } from 'react-icons/fi';
+
 
 interface TerminalProps {
   isOpen: boolean;
@@ -305,7 +305,7 @@ const Terminal = ({ isOpen, onClose }: TerminalProps) => {
                 className="mb-6 space-y-2"
               >
                 <div className="text-white font-semibold">
-                  Welcome to Alok's Portfolio Terminal
+                  Welcome to Alok&apos;s Portfolio Terminal
                 </div>
                 <div className="text-white/50">
                   Type <span className="text-white/70">help</span> to see available commands.

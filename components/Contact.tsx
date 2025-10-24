@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiArrowRight, FiMapPin, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi';
+import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiMapPin, FiSend, FiCheck, FiAlertCircle } from 'react-icons/fi';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -83,7 +83,7 @@ const Contact = () => {
           </h2>
           <div className="accent-border w-full mb-8"></div>
           <p className="text-2xl sm:text-3xl text-white/80 max-w-2xl">
-            Have a project in mind or want to collaborate? I'd love to hear from you.
+            Have a project in mind or want to collaborate? I&apos;d love to hear from you.
           </p>
         </motion.div>
 
@@ -228,7 +228,7 @@ const Contact = () => {
                   className="flex items-center gap-2 p-4 bg-green-500/10 border border-green-500/20 rounded-lg"
                 >
                   <FiCheck className="text-green-500" size={18} />
-                  <span className="text-green-500 text-sm">Message sent successfully! I'll get back to you soon.</span>
+                  <span className="text-green-500 text-sm">Message sent successfully! I&apos;ll get back to you soon.</span>
                 </motion.div>
               )}
 
@@ -278,7 +278,7 @@ const Contact = () => {
           className="mt-32 pt-8 border-t border-white/5 text-center"
         >
           <p className="text-white/40 text-sm">
-            © 2025 Alok Kumar. Built with Next.js, TypeScript & Framer Motion
+            © 2025 Alok Kumar. Built with Next.js, TypeScript &amp; Framer Motion
           </p>
         </motion.div>
       </div>

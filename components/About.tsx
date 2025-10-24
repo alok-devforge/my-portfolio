@@ -86,7 +86,7 @@ const About = () => {
                 { label: 'Education', value: 'B.Tech Computer Science' },
                 { label: 'Focus', value: 'MLOps & System Design' },
                 { label: 'Problems Solved', value: '200+ on LeetCode' },
-              ].map((item, index) => (
+              ].map((item) => (
                 <div key={item.label} className="group">
                   <p className="text-sm text-white/40 uppercase tracking-wide mb-1">{item.label}</p>
                   <p className="text-xl font-medium group-hover:text-blue-500 transition-colors">{item.value}</p>
