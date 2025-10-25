@@ -58,7 +58,7 @@ const Terminal = ({ isOpen, onClose }: TerminalProps) => {
     ],
     achievements: [
       'Finalist – IIT Madras Shaastra Coding Contest',
-      '1st Runner Up – Technologia 10.0 Hackathon',
+      '1st Runner Up – Technologia 1.0 Hackathon',
       'Finalist – Status Code 2.0 Hackathon'
     ]
   };
