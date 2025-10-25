@@ -283,14 +283,12 @@ const Terminal = ({ isOpen, onClose }: TerminalProps) => {
           
           {/* Terminal Header */}
           <div className="relative bg-black/60 backdrop-blur-sm px-6 py-3 flex items-center justify-between border-b border-white/10">
+            <span className="text-white/60 text-sm font-mono">terminal</span>
             <div className="flex items-center gap-2">
               {/* Traffic Light Buttons */}
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400 cursor-pointer transition-colors" onClick={onClose} />
-                <div className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-colors" />
-                <div className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 cursor-pointer transition-colors" />
-              </div>
-              <span className="text-white/60 text-sm font-mono ml-2">terminal</span>
+              <div className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 cursor-pointer transition-colors" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400 cursor-pointer transition-colors" />
+              <div className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400 cursor-pointer transition-colors" onClick={onClose} />
             </div>
           </div>
 

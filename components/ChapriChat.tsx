@@ -29,12 +29,15 @@ const ChapriChat = () => {
     scrollToBottom();
   }, [messages]);
 
-  const getChapriResponse = async (userMessage: string): Promise<string> => {
+  const getChapriResponse = async (userMessage: string, conversationHistory: Message[]): Promise<string> => {
     try {
       const response = await fetch('/api/chapri-chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMessage }),
+        body: JSON.stringify({ 
+          message: userMessage,
+          history: conversationHistory 
+        }),
       });
 
       if (!response.ok) throw new Error('API error');
@@ -52,10 +55,11 @@ const ChapriChat = () => {
 
     const userMessage = input.trim();
     setInput('');
-    setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
+    const updatedMessages: Message[] = [...messages, { role: 'user' as const, content: userMessage }];
+    setMessages(updatedMessages);
     setIsLoading(true);
 
-    const botReply = await getChapriResponse(userMessage);
+    const botReply = await getChapriResponse(userMessage, updatedMessages);
     setMessages(prev => [...prev, { role: 'bot', content: botReply }]);
     setIsLoading(false);
   };
