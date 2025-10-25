@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ScrollManager from "@/components/ScrollManager";
 import TerminalButton from "@/components/TerminalButton";
+import ChapriChat from "@/components/ChapriChat";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({ 
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <TerminalButton />
+        <ChapriChat />
       </body>
     </html>
   );
