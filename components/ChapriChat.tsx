@@ -106,7 +106,7 @@ const ChapriChat = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-8 left-8 z-40 w-96 max-w-[calc(100vw-4rem)] h-[600px] max-h-[calc(100vh-4rem)] bg-black/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 flex flex-col overflow-hidden"
+            className="fixed bottom-4 left-4 right-4 top-20 sm:bottom-8 sm:left-8 sm:right-auto sm:top-auto z-[100] w-auto sm:w-96 h-auto sm:h-[600px] bg-black/90 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-black/60 backdrop-blur-sm p-4 flex items-center justify-between border-b border-white/10">
@@ -183,7 +183,7 @@ const ChapriChat = () => {
             </div>
 
             {/* Input */}
-            <form onSubmit={handleSubmit} className="p-4 border-t border-white/10 bg-black/60 backdrop-blur-sm">
+            <form onSubmit={handleSubmit} className="p-3 sm:p-4 border-t border-white/10 bg-black/60 backdrop-blur-sm flex-shrink-0">
               <div className="flex items-center gap-2">
                 <input
                   type="text"
@@ -191,7 +191,7 @@ const ChapriChat = () => {
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Type karo yaar..."
                   disabled={isLoading}
-                  className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 outline-none focus:border-blue-500 transition-colors disabled:opacity-50"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-xl px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base text-white placeholder-white/40 outline-none focus:border-blue-500 transition-colors disabled:opacity-50"
                 />
                 <motion.button
                   type="submit"
